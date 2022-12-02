@@ -1,5 +1,5 @@
 body{
-    color: #8F8F8F;
+    color: white;
     font-family: 'K2D';
     background-color: #1B1E23;
     text-align: justify;
@@ -9,7 +9,7 @@ body{
     font-family: 'Audiowide';
 }
 
-.color-default{
+.color-8F8F8F{
     color: #8F8F8F;
 }
 
