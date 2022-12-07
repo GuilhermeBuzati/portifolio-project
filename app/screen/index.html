@@ -34,7 +34,7 @@
                 font-size: 3.5rem;
             }
         }
-    </style>
+    </style>    
 
     <!-- Custom font Audiowide-->
     <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
@@ -278,6 +278,32 @@
                             </div>
                         </article>
 
+                        <article>
+                            <div class="row mb-4">
+                                <div class="col-12">
+                                    <h1 class="font-audiowide color-768499">Portifólio</h1>
+                                    <hr class="hr-title color-white">
+                                </div>
+                            </div>
+                            <div class="row row-cols-sm-12 row-cols-md-11 row-cols-lg-11 mb-5" id="list-projects">
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <img src="../shared/design/images/portifolio/20200613_203848.jpg" class="img-thumbnail img-fluid img-portfolio" alt="Imagem..." title="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Toldos JN</h5>
+                                            <p class="card-text">Elaboração de um sistema web com APIs e a função de gerenciar produto e orçamentos da empresa.</p>                                            
+                                            <p class="card-text mb-0">Tipo: Sistema Web</p>                                  
+                                            <p class="card-text mb-0">Ferramentas: Java Spring Boot e Python Flask</p>
+                                            <p class="card-text">Status: Em construção</p>
+                                        </div>      
+                                        <div class="card-footer">
+                                            <small class="text-muted" id="last-update">22:36 12/06/2022</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </article>
                     </div>       
             </main>
         </div>
@@ -289,6 +315,49 @@
         crossorigin="anonymous"></script>
 
     <script src="../shared/js/sidebars.js"></script>
+    
+    <script>    
+        const items = document.getElementById('list-projects').children;
+
+        let text = "";
+        for (let i = 0; i < items.length; i++) {
+            item_child = items[i].children
+
+            for(let j = 0; j < item_child.length; j++){
+                aux = item_child[0].children;
+
+                for(let k = 0; k < aux.length; k++){
+
+                    if(k == 2){
+                        id_last_update = aux[k].children[0].id
+                        text_last_update = aux[k].children[0].innerHTML;
+                        console.log(text_last_update)
+                        lastUpdatePortifolio(text_last_update, id_last_update)
+                    }
+                }
+
+            }
+        }
+
+        function lastUpdatePortifolio(date_str, id){
+
+            var date_update = new Date(date_str);    
+
+            let currentTime = new Date()
+            let difference = currentTime - date_update;
+            let dias = Math.floor(difference / 1000 / 60 / 60 / 24);
+            let horas = Math.floor(difference / 1000 / 60 / 60) % 24;
+            let minutos = Math.floor(difference / 1000 / 60) % 60;
+            let segundos = Math.floor(difference / 1000) % 60;
+            
+            console.log({ dias, horas, minutos, segundos })
+
+            document.getElementById(id).innerHTML = "Última atualização: " + dias + " Dias " + horas + " Horas " + minutos + " Min " + segundos + " Segs";
+        }
+
+    </script>
+
+
 </body>
 
 </html>
