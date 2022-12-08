@@ -83,3 +83,11 @@ a {
 .img-portfolio{
     width: 400px;
 }
+
+.border-background-color-262B32{
+    border-color: #262B32 !important;
+}
+
+.card-project{
+    max-height: 500px;
+}
