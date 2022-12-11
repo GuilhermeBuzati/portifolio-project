@@ -79,15 +79,10 @@ a {
     margin: 0 !important;
 }
 
-
-.img-portfolio{
-    width: 400px;
-}
-
 .border-background-color-262B32{
     border-color: #262B32 !important;
 }
 
 .card-project{
-    max-height: 500px;
+    margin-bottom: 1rem!important;
 }
