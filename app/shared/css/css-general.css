@@ -86,3 +86,7 @@ a {
 .card-project{
     margin-bottom: 1rem!important;
 }
+
+.required-input{
+    color: red;
+}
