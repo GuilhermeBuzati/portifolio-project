@@ -379,7 +379,21 @@
                                         <i id="icon-copy-email" class="fa-regular fa-copy" onclick="copyToClipboardEffect(this)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Copiar texto"></i>
                                     </p>
                                     <p> 
-                                        <i class="fa-brands fa-discord" style="font-size: 2em; padding-right: 4px;" title="Discord" alt="Icone Discord"></i> 
+                                        <i class="fa-brands fa-linkedin" style="font-size: 2em; padding-right: 11px; padding-left: 4px;" title="LinkedIn" alt="Icone LinkedIn"></i> 
+                                        <a href="https://www.linkedin.com/in/guilhermebuzati/" target="_blank" style="text-decoration:none" id="contact-linkedin">
+                                            Guilherme Buzati
+                                        </a>
+                                        <i id="icon-copy-linkedin" class="fa-regular fa-copy" onclick="copyToClipboardEffect(this)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Copiar texto"></i>
+                                    </p>
+                                    <p> 
+                                        <i class="fa-brands fa-github" style="font-size: 2em; padding-right: 9px; padding-left: 4px;" title="GitHub" alt="Icone GitHub"></i> 
+                                        <a href="https://github.com/GuilhermeBuzati" target="_blank" style="text-decoration:none" id="contact-github">
+                                            Guilherme Buzati
+                                        </a>
+                                        <i id="icon-copy-github" class="fa-regular fa-copy" onclick="copyToClipboardEffect(this)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Copiar texto"></i>
+                                    </p>
+                                    <p> 
+                                        <i class="fa-brands fa-discord" style="font-size: 2em; padding-right: 5px;" title="Discord" alt="Icone Discord"></i> 
                                         <span id="contact-discord">Guiherme#3555</span>
                                         <i id="icon-copy-discord" class="fa-regular fa-copy" onclick="copyToClipboardEffect(this)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Copiar texto"></i>
                                     </p>
@@ -446,16 +460,19 @@
             document.getElementById(id).innerHTML = "Última atualização: " + dias + " Dias " + horas + " Horas " + minutos + " Min " + segundos + " Segs";
         }
 
-        function copyToClipboardEffect(e){
+        function copyToClipboardEffect(e){            
             id = "#" + e.id
+            
             id_to_copy = "#contact-" + id.split('-').slice(2).join('-')
 
-            copyText = $(id_to_copy).text().trim()
+            if(id_to_copy == "#contact-linkedin")
+                copyText = $(id_to_copy).attr('href');
+            else
+                copyText = $(id_to_copy).text().trim()
                 
             navigator.clipboard.writeText(copyText);
             
             if($(id).hasClass("fa-regular fa-copy")){ 
-
                 $(id).attr("data-bs-original-title","Copiado!");
                 $(id).removeClass("fa-regular fa-copy");
 
