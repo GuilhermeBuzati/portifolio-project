@@ -376,7 +376,7 @@
                                         <a href="mailto:guilhermeleopoldinoo@gmail.com?subject=" target="_blank" style="text-decoration:none" id="contact-email">
                                             guilhermeleopoldinoo@gmail.com
                                         </a>
-                                        <i id="title-copy-text-email" class="fa-regular fa-copy"data-bs-toggle="tooltip" data-bs-placement="top" title="Copiado!"></i>
+                                        <i id="title-copy-text-email" class="fa-regular fa-copy" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Copiar texto"></i>
                                     </p>
                                     <p> 
                                         <i class="fa-brands fa-discord" style="font-size: 2em; padding-right: 4px;" title="Discord" alt="Icone Discord"></i> 
@@ -403,7 +403,9 @@
         crossorigin="anonymous"></script>
 
     <script src="../shared/js/sidebars.js"></script>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script>            
         const items = document.getElementById('list-projects').children;
 
@@ -443,14 +445,66 @@
             document.getElementById(id).innerHTML = "Última atualização: " + dias + " Dias " + horas + " Horas " + minutos + " Min " + segundos + " Segs";
         }
 
-        function copyEmailToClipboard(){
-            var copyText = document.getElementById("contact-email").innerHTML;
+        // function copyEmailToClipboard(){
+        //     var copyText = document.getElementById("contact-email").innerHTML;
             
-            navigator.clipboard.writeText(copyText);
+        //     navigator.clipboard.writeText(copyText);
 
-            var copyText = document.getElementById("title-copy-text-email").setAttribute("title", "Copiado!");
+        //     document.getElementById("title-copy-text-email").setAttribute("data-bs-original-title", "Copiado!");
 
-        }
+        //     alert("Copiado")
+        //     document.getElementById("title-copy-text-email").title.visibility = 'visible';
+        // }
+
+        $( document ).ready(function() {
+            $('#title-copy-text-email').click(function() {
+                // copyText = $('#contact-email').text().trim()
+                
+                // navigator.clipboard.writeText(copyText);
+
+                // $('#title-copy-text-email').attr("data-bs-original-title","Copiado!");
+                // $('#title-copy-text-email').tooltip("show");            
+
+                // $('#title-copy-text-email').removeClass("fa-regular fa-copy");
+
+                // $( "#title-copy-text-email" ).slideUp( 50 ).delay( 50 ).fadeIn( 400 );                
+                // $('#title-copy-text-email').addClass("fa-solid fa-check");
+
+                // setTimeout(function () {
+                //     $('#title-copy-text-email').removeClass("fa-solid fa-check");
+                //     $( "#title-copy-text-email" ).slideUp( 50 ).delay( 50 ).fadeIn( 400 );                
+                //     $('#title-copy-text-email').addClass("fa-regular fa-copy");
+                //     $('#title-copy-text-email').attr("data-bs-original-title","Copiar texto!");
+                //  }, 2000);
+
+                copyToClipboardEfferct("#title-copy-text-email")
+
+            })
+
+            function copyToClipboardEfferct(id){
+
+                copyText = $(id).text().trim()
+                    
+                    navigator.clipboard.writeText(copyText);
+
+                    $(id).attr("data-bs-original-title","Copiado!");
+                    $(id).tooltip("show");            
+
+                    $(id).removeClass("fa-regular fa-copy");
+
+                    $(id).slideUp( 50 ).delay( 50 ).fadeIn( 400 );                
+                    $(id).addClass("fa-solid fa-check");
+
+                    setTimeout(function () {
+                        $(id).removeClass("fa-solid fa-check");
+                        $(id).slideUp( 50 ).delay( 50 ).fadeIn( 400 );                
+                        $(id).addClass("fa-regular fa-copy");
+                        $(id).attr("data-bs-original-title","Copiar texto!");
+                    }, 2000);
+            }
+        });
+
+
 
     </script>
 
