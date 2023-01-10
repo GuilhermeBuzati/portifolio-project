@@ -376,11 +376,12 @@
                                         <a href="mailto:guilhermeleopoldinoo@gmail.com?subject=" target="_blank" style="text-decoration:none" id="contact-email">
                                             guilhermeleopoldinoo@gmail.com
                                         </a>
-                                        <i id="title-copy-text-email" class="fa-regular fa-copy" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Copiar texto"></i>
+                                        <i id="icon-copy-email" class="fa-regular fa-copy" onclick="copyToClipboardEffect(this)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Copiar texto"></i>
                                     </p>
                                     <p> 
                                         <i class="fa-brands fa-discord" style="font-size: 2em; padding-right: 4px;" title="Discord" alt="Icone Discord"></i> 
-                                        Guiherme#3555 
+                                        <span id="contact-discord">Guiherme#3555</span>
+                                        <i id="icon-copy-discord" class="fa-regular fa-copy" onclick="copyToClipboardEffect(this)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Copiar texto"></i>
                                     </p>
                                     <p> 
                                         <i class="fa-solid fa-location-dot" style="font-size: 2em; padding-right: 15px; padding-left: 6px;" title="Localização" alt="Icone Localização"></i> 
@@ -445,64 +446,30 @@
             document.getElementById(id).innerHTML = "Última atualização: " + dias + " Dias " + horas + " Horas " + minutos + " Min " + segundos + " Segs";
         }
 
-        // function copyEmailToClipboard(){
-        //     var copyText = document.getElementById("contact-email").innerHTML;
-            
-        //     navigator.clipboard.writeText(copyText);
+        function copyToClipboardEffect(e){
+            id = "#" + e.id
+            id_to_copy = "#contact-" + id.split('-').slice(2).join('-')
 
-        //     document.getElementById("title-copy-text-email").setAttribute("data-bs-original-title", "Copiado!");
-
-        //     alert("Copiado")
-        //     document.getElementById("title-copy-text-email").title.visibility = 'visible';
-        // }
-
-        $( document ).ready(function() {
-            $('#title-copy-text-email').click(function() {
-                // copyText = $('#contact-email').text().trim()
+            copyText = $(id_to_copy).text().trim()
                 
-                // navigator.clipboard.writeText(copyText);
+            navigator.clipboard.writeText(copyText);
+            
+            if($(id).hasClass("fa-regular fa-copy")){ 
 
-                // $('#title-copy-text-email').attr("data-bs-original-title","Copiado!");
-                // $('#title-copy-text-email').tooltip("show");            
+                $(id).attr("data-bs-original-title","Copiado!");
+                $(id).removeClass("fa-regular fa-copy");
 
-                // $('#title-copy-text-email').removeClass("fa-regular fa-copy");
+                $(id).slideUp( 50 ).delay( 50 ).fadeIn( 400 );                
+                $(id).addClass("fa-solid fa-check");
 
-                // $( "#title-copy-text-email" ).slideUp( 50 ).delay( 50 ).fadeIn( 400 );                
-                // $('#title-copy-text-email').addClass("fa-solid fa-check");
-
-                // setTimeout(function () {
-                //     $('#title-copy-text-email').removeClass("fa-solid fa-check");
-                //     $( "#title-copy-text-email" ).slideUp( 50 ).delay( 50 ).fadeIn( 400 );                
-                //     $('#title-copy-text-email').addClass("fa-regular fa-copy");
-                //     $('#title-copy-text-email').attr("data-bs-original-title","Copiar texto!");
-                //  }, 2000);
-
-                copyToClipboardEfferct("#title-copy-text-email")
-
-            })
-
-            function copyToClipboardEfferct(id){
-
-                copyText = $(id).text().trim()
-                    
-                    navigator.clipboard.writeText(copyText);
-
-                    $(id).attr("data-bs-original-title","Copiado!");
-                    $(id).tooltip("show");            
-
-                    $(id).removeClass("fa-regular fa-copy");
-
+                setTimeout(function () {
+                    $(id).removeClass("fa-solid fa-check");
                     $(id).slideUp( 50 ).delay( 50 ).fadeIn( 400 );                
-                    $(id).addClass("fa-solid fa-check");
-
-                    setTimeout(function () {
-                        $(id).removeClass("fa-solid fa-check");
-                        $(id).slideUp( 50 ).delay( 50 ).fadeIn( 400 );                
-                        $(id).addClass("fa-regular fa-copy");
-                        $(id).attr("data-bs-original-title","Copiar texto!");
-                    }, 2000);
+                    $(id).addClass("fa-regular fa-copy");
+                    $(id).attr("data-bs-original-title","Copiar texto!");
+                }, 2000);
             }
-        });
+        }
 
 
 
