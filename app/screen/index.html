@@ -372,15 +372,11 @@
                                 
                                 <div class="col-md-5 col-lg-4 col-sm-12">
                                     <p> 
-                                        <i class="fab fa-whatsapp" style="font-size: 2em; padding-right: 9px; padding-left: 5px;" title="Whatsapp" alt="Icone Whatsapp"></i> 
-                                        <span id="contact-phone">+55 (17) 99679-3748</span>
-                                        <i class="fa-regular fa-copy" onclick="copyPhoneToClipboard()"></i>
-                                    </p>
-                                    <p> 
                                         <i class="fa-solid fa-envelope" style="font-size: 2em; padding-right: 10px; padding-left: 2px;" title="Gmail" alt="Icone Email" ></i>
-                                        <a href="mailto:guilhermeleopoldinoo@gmail.com?subject=" target="_blank" style="text-decoration:none">
+                                        <a href="mailto:guilhermeleopoldinoo@gmail.com?subject=" target="_blank" style="text-decoration:none" id="contact-email">
                                             guilhermeleopoldinoo@gmail.com
                                         </a>
+                                        <i id="title-copy-text-email" class="fa-regular fa-copy"data-bs-toggle="tooltip" data-bs-placement="top" title="Copiado!"></i>
                                     </p>
                                     <p> 
                                         <i class="fa-brands fa-discord" style="font-size: 2em; padding-right: 4px;" title="Discord" alt="Icone Discord"></i> 
@@ -447,10 +443,12 @@
             document.getElementById(id).innerHTML = "Última atualização: " + dias + " Dias " + horas + " Horas " + minutos + " Min " + segundos + " Segs";
         }
 
-        function copyPhoneToClipboard(){
-            var copyText = document.getElementById("contact-phone").innerHTML;
-
+        function copyEmailToClipboard(){
+            var copyText = document.getElementById("contact-email").innerHTML;
+            
             navigator.clipboard.writeText(copyText);
+
+            var copyText = document.getElementById("title-copy-text-email").setAttribute("title", "Copiado!");
 
         }
 
