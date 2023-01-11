@@ -97,13 +97,13 @@ a {
 
 
 
-@media (min-width: 992px) {
+@media screen and (-webkit-min-device-pixel-ratio:992px) {
     #hr-divider-contact{
         display: none;
     }
 }
 
-@media (max-width: 991px) {
+@media screen and (-webkit-max-device-pixel-ratio:991px) {
     #vr-divider-contact{
         display: none;
     }
