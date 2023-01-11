@@ -94,3 +94,17 @@ a {
 .required-input{
     color: red;
 }
+
+
+
+@media (min-width: 992px) {
+    #hr-divider-contact{
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    #vr-divider-contact{
+        display: none;
+    }
+}
