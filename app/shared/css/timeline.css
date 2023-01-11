@@ -1,0 +1,23 @@
+.timeline {
+    position: relative;
+    list-style: none;
+  }
+  
+  .timeline .timeline-item-color-0C111A {
+    position: relative;
+  }
+  
+  .timeline .timeline-item-color-0C111A:after {
+    position: absolute;
+    display: block;
+    top: 0;
+  }
+  
+  .timeline .timeline-item-color-0C111A:after {
+    background-color: #0C111A;
+    left: -38px;
+    border-radius: 50%;
+    height: 11px;
+    width: 11px;
+    content: "";
+  }
