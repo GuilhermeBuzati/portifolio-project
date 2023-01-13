@@ -111,7 +111,35 @@
                 </div>
             </aside>
 
-            <main class="offset-sm-4 ofsset-md-4 offset-lg-2 col overflow-auto h-100">
+            <nav id="navbar-mobile" class="navbar navbar-expand-md bg-dark navbar-dark position-fixed" style="z-index: 99;">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Logo</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a href="#article-skills" class="nav-link text-white">Sobre</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#article-formation" class="nav-link text-white">Formações</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#article-resume" class="nav-link text-white">Experiências</a>
+                      </li>  
+                      <li class="nav-item">
+                        <a href="#article-portifolio" class="nav-link text-white">Portifólio</a>
+                      </li>  
+                      <li class="nav-item">
+                        <a href="#article-contact" class="nav-link text-white">Contato</a>
+                      </li>    
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+            <main id="body-main" class="offset-sm-4 ofsset-md-4 offset-lg-2 col overflow-auto h-100">
                     <div class="container-fluid mt-5 mb-5">
                         <article id="article-about">
                             <div class="row mb-4">
@@ -490,6 +518,23 @@
                 }, 2000);
             }
         }
+
+        // $(document).ready(function(){
+        //     var offset = $('#navbar-mobile').offset().top;
+        //     var offsetMain = $('#body-main').offset().top;
+        //     console.log(offset)
+        //     console.log(offsetMain)
+        //     var $navbarMobile = $('#navbar-mobile'); 
+            
+        //     $(document).on('scroll', function () {
+        //         if (offset <= offsetMain) {
+        //             console.log("aqui" + offset)
+        //             $navbarMobile.addClass('position-fixed');
+        //         } else {
+        //             $navbarMobile.removeClass('position-fixed');
+        //         }
+        //     });
+        // });
 
 
 

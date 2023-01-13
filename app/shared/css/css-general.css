@@ -95,6 +95,10 @@ a {
     color: red;
 }
 
+#navbar-mobile{
+  left: 0;
+  right: 0;
+}
 
 @media (min-width: 992px) {
     #hr-divider-contact{
@@ -110,6 +114,15 @@ a {
 
 @media (max-width: 767px){
     #sidebar-me{
+        display: none;
+    }
+    #article-about{
+        margin-top: 530px;
+    }
+}
+
+@media (min-width: 768px){
+    #navbar-mobile{
         display: none;
     }
 }
