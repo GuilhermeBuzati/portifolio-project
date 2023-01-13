@@ -100,6 +100,16 @@ a {
   right: 0;
 }
 
+#ancora-about, #ancora-skills, #ancora-formation, #ancora-resume #ancora-contact  {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: 0;
+    margin-top: -60px;
+    background-color: transparent;
+    z-index: -1;
+}
+
 @media (min-width: 992px) {
     #hr-divider-contact{
         display: none;
@@ -117,7 +127,7 @@ a {
         display: none;
     }
     #article-about{
-        margin-top: 530px;
+        margin-top: 70px;
     }
 }
 
