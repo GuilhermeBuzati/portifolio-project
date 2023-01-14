@@ -44,10 +44,6 @@ body{
     background-color: #262B32;
 }
 
-ul{
-    font-family: 'Audiowide';
-}
-
 .center {
     display: flex;
     flex-wrap: wrap;
@@ -58,6 +54,7 @@ ul{
 
 a {
     color: inherit;
+    text-decoration: underline;
 }
 
 .icon-side-bar{
@@ -129,10 +126,20 @@ a {
     #article-about{
         margin-top: 70px;
     }
+    #picture-about-mobile{
+        display: block;
+    }
+    #list-about-mobile{
+        list-style: none;
+        padding-left: 0;
+    }
 }
 
 @media (min-width: 768px){
     #navbar-mobile{
+        display: none;
+    }   
+     #picture-about-mobile{
         display: none;
     }
 }
