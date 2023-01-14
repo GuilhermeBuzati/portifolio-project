@@ -126,9 +126,6 @@ a {
     #article-about{
         margin-top: 70px;
     }
-    #picture-about-mobile{
-        display: block;
-    }
     #list-about-mobile{
         list-style: none;
         padding-left: 0;
@@ -139,7 +136,7 @@ a {
     #navbar-mobile{
         display: none;
     }   
-     #picture-about-mobile{
+     #section-about-mobile{
         display: none;
     }
 }
