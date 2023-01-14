@@ -107,15 +107,29 @@ a {
     z-index: -1;
 }
 
-@media (min-width: 992px) {
-    #hr-divider-contact{
-        display: none;
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 5%;
+    display: none;
+    background-color: #0C111A;
+    border: #8F8F8F solid 1px;
+    color: #fff;
+}
+
+@media (max-width: 575px){
+    #btn-back-to-top{
+        width: 15% !important;
     }
 }
 
 @media (max-width: 991px) {
     #vr-divider-contact{
         display: none;
+    }
+    #btn-back-to-top{
+        width: 10%;
     }
 }
 
@@ -137,6 +151,12 @@ a {
         display: none;
     }   
      #section-about-mobile{
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    #hr-divider-contact{
         display: none;
     }
 }

@@ -470,6 +470,9 @@
                     </article>
                 </div>       
             </main>
+            <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
         </div>
     </div>
 
@@ -547,6 +550,28 @@
                     $(id).attr("data-bs-original-title","Copiar texto!");
                 }, 2000);
             }
+        }
+
+
+        let btn_back_to_top = document.getElementById("btn-back-to-top")
+
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn_back_to_top.style.display = "block";
+            } else {
+                btn_back_to_top.style.display = "none";
+            }
+        }
+
+        btn_back_to_top.addEventListener("click", backToTop);
+
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
 
         // $(document).ready(function(){
