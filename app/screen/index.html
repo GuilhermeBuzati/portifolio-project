@@ -386,7 +386,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-12 col-lg-4 col-sm-12 mb-5">
+                            <div id="section-form-email" class="col-md-12 col-lg-4 col-sm-12 mb-5" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Opa, esse formulário é para preencher espaço, mas também é um atalho para enviar e-mail caso queira"></i>
                                 <form action="mailto:guilhermeleopoldinoo@gmail.com" method="post" enctype="text/plain">
                                     <div class="mb-3">
                                         <label for="input-name" class="form-label">Nome<span class="required-input">*</span></label>
@@ -543,6 +543,9 @@
         });
 
         let btn_back_to_top = document.getElementById("btn-back-to-top")
+        let form_send_email = document.getElementById("section-form-email")
+        let scroll_form_email = $(form_send_email).offset().top;
+        let showed_tooltip = false
 
         window.onscroll = function () {
             scrollFunction();
@@ -554,6 +557,25 @@
             } else {
                 btn_back_to_top.style.display = "none";
             }
+            console.log(document.documentElement.scrollTop )
+            console.log(scroll_form_email )
+
+            if (!showed_tooltip){
+                if (document.documentElement.scrollTop >=  scroll_form_email) {
+                    $(form_send_email).tooltip("show");
+                    showed_tooltip = true
+
+                }else if(document.documentElement.scrollTop >=  (scroll_form_email/2)){
+                    $(form_send_email).tooltip("show");
+                    showed_tooltip = true
+
+                    setTimeout(function () {
+                        $(form_send_email).tooltip("hide");
+                    }, 3000);
+                    
+                }
+            }
+
         }
 
         btn_back_to_top.addEventListener("click", backToTop);
