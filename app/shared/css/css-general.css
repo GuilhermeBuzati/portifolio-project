@@ -118,6 +118,10 @@ a {
     color: #fff;
 }
 
+p {
+    color: #fff;
+}
+
 @media (max-width: 575px){
     #btn-back-to-top{
         width: 15% !important;
