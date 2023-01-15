@@ -19,23 +19,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>    
-
+ 
     <!-- Custom font Audiowide-->
     <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
 
@@ -54,12 +38,17 @@
 
     <div class="container-fluid flex-grow-1 d-flex flex-column flex-sm-row overflow-auto" style="padding-left: 0 !Important;">
         <div class="row flex-grow-sm-1 flex-grow-0">
-            <aside class="col-sm-5 col-md-4 col-lg-2 flex-grow-sm-1 flex-shrink-1 flex-grow-0 sticky-top pb-sm-0 pb-3">
-                <div class="background-color-0C111A rounded-3 p-1 h-100 sticky-top" >
+            <!-- stick-top funciona apenas para safari, utilizado position-fixed para resolver -->
+            <aside id="sidebar-me" class="col-sm-4 col-md-4 col-lg-2 col-xl-2 flex-grow-sm-1 flex-shrink-1 flex-grow-0 position-fixed pb-sm-0 pb-3 vh-100">
+                <div class="background-color-0C111A rounded-3 p-1 h-100" >
                     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                         <div class="text-center">
                             <img src="../shared/design/images/perfil/perfil.jpg" class="rounded" alt="..." style="max-width: 100%; height: auto;">
-                            <p style="font-size: 1.5em;"> Guilherme Buzati </p>
+                            <ul id="list-about">
+                                <li style="font-size: 1.4em;"> Guilherme Buzati </li>                      
+                                <li class="color-768499"> Dev. Java/Python Full-Stack </li>                      
+                                <li class="color-768499"> Tecnólogo em Sistema para Internet </li>               
+                            </ul>    
                         </div>
                     </a>
                     <hr class="color-8F8F8F">
@@ -69,39 +58,39 @@
                         <a href="https://www.linkedin.com/in/guilhermebuzati/" target="_blank"><i class="fa-brands fa-linkedin icon-side-bar" title="LinkedIn" alt="Icone LinkedIn" ></i></a>
                     </div>
                     <hr class="color-8F8F8F">
-                    <ul class="nav nav-pills flex-column mb-auto">
-                        <li class="nav-item">
+                    <ul class="nav nav-pills flex-column mb-auto font-audiowide">
+                        <li>
                             <a href="#" class="nav-link active " aria-current="page">
                                 <i class="fa-solid fa-code me-1 color-8F8F8F"></i>
                                 Sobre
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white">
+                            <a href="#article-skills" class="nav-link text-white">
                                 <i class="fa-solid fa-code me-1 color-8F8F8F"></i>
                                 Habilidades
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white">
+                            <a href="#article-formation" class="nav-link text-white">
                                 <i class="fa-solid fa-code me-1 color-8F8F8F"></i>
                                 Formações
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white">
+                            <a href="#article-resume" class="nav-link text-white">
                                 <i class="fa-solid fa-code me-1 color-8F8F8F"></i>
                                 Experiências
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white">
+                            <a href="#article-portifolio" class="nav-link text-white">
                                 <i class="fa-solid fa-code me-1 color-8F8F8F"></i>
                                 Portifólio
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white">
+                            <a href="#article-contact" class="nav-link text-white">
                                 <i class="fa-solid fa-code me-1 color-8F8F8F"></i>
                                 Contato
                             </a>
@@ -110,307 +99,369 @@
                 </div>
             </aside>
 
-            <main class="col overflow-auto h-100">
-                    <div class="container-fluid mt-5 mb-5">
-                        <article>
-                            <div class="row mb-4">
-                                <div class="col-sm-12">
-                                    <h1 class="font-audiowide color-768499">Sobre</h1>
-                                    <hr class="hr-title color-white">
-                                </div>
-                            </div>  
-                            <div class="row mb-5">
-                                <div class="col-sm-12 col-md-11 col-lg-11">
-                                    <p class="justify-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id posuere urna.
-                                        Praesent sit amet nisi semper, aliquam erat eu, faucibus justo. Etiam ornare augue quis bibendum rutrum.
-                                        Cras vehicula, orci vitae ultrices tristique, mauris magna scelerisque dolor, sit amet pellentesque mauris elit id enim.
-                                        Donec ut orci porta enim dignissim ultrices. Nullam suscipit congue erat, eget maximus nibh luctus et.
-                                        In volutpat nunc id nisi laoreet dignissim. Mauris ac ullamcorper ante.
-                                        Pellentesque pharetra pellentesque felis, sit amet convallis velit dapibus ut.
-                                        Donec vehicula risus nec ipsum dignissim vehicula. Nulla viverra libero at tortor convallis facilisis.
-                                        Sed placerat massa viverra pretium molestie.
-                                    </p>
-                                    <p class="justify-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id posuere urna.
-                                        Praesent sit amet nisi semper, aliquam erat eu, faucibus justo. Etiam ornare augue quis bibendum rutrum.
-                                        Cras vehicula, orci vitae ultrices tristique, mauris magna scelerisque dolor, sit amet pellentesque mauris elit id enim.
-                                        Donec ut orci porta enim dignissim ultrices. Nullam suscipit congue erat, eget maximus nibh luctus et.
-                                        In volutpat nunc id nisi laoreet dignissim. Mauris ac ullamcorper ante.
-                                        Pellentesque pharetra pellentesque felis, sit amet convallis velit dapibus ut.
-                                        Donec vehicula risus nec ipsum dignissim vehicula. Nulla viverra libero at tortor convallis facilisis.
-                                        Sed placerat massa viverra pretium molestie.
-                                    </p>
-                                </div>
-                            </div>  
-                        </article>
+            <nav id="navbar-mobile" class="navbar navbar-expand-md background-color-0C111A  navbar-dark position-fixed" style="z-index: 99;">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Portifólio - Guilherme</a>
+                  <button id="btn-collapse-navbar" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-navbar-mobile">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse font-audiowide" id="div-navbar-mobile">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a href="#ancora-about" class="nav-link text-white">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#ancora-skills" class="nav-link text-white">Habilidades</a>
+                        </li>
+                      <li class="nav-item">
+                        <a href="#ancora-formation" class="nav-link text-white">Formações</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#ancora-resume" class="nav-link text-white">Experiências</a>
+                      </li>  
+                      <li class="nav-item">
+                        <a href="#ancora-portifolio" class="nav-link text-white">Portifólio</a>
+                      </li>  
+                      <li class="nav-item">
+                        <a href="#ancora-contact" class="nav-link text-white">Contato</a>
+                      </li>    
+                    </ul>
+                  </div>
+                </div>
+              </nav>
 
-                        <article>
-                            <div class="row mb-4">
-                                <div class="col-12">
-                                    <h1 class="font-audiowide color-768499">Habilidades</h1>
-                                    <hr class="hr-title color-white">
-                                </div>
-                            </div>   
-                            <div class="row mb-4">
-                                <div class="col-lg-3 mb-5">
-                                    <h3 class="font-audiowide"> Linguagens </h3>                                    
-                                    <img src="../shared/design/images/tools/java.png" class="img-skills" alt="Logo da linguagem Java" title="Java">
-                                    <img src="../shared/design/images/tools/python.png" class="img-skills"  alt="Logo da linguagem Python" title="Python">
-                                    <img src="../shared/design/images/tools/javascript.png" class="img-skills" alt="Logo da linguagem JavaScript" title="JavaScript">
-                                    <img src="../shared/design/images/tools/dart.png" class="img-skills" alt="Logo da linguagem Dart" title="Dart">
-                                    <img src="../shared/design/images/tools/html.png" class="img-skills" alt="Logo da linguagem HTML 5" title="HTML 5">
-                                    <img src="../shared/design/images/tools/css.png" class="img-skills" alt="Logo da linguagem CSS 3" title="CSS 3">
-                                    <img src="../shared/design/images/tools/php.png" class="img-skills" alt="Logo da linguagem PHP" title="PHP">                                    
-                                </div>
-                                <div class="offset-lg-1 col-lg-3 mb-5">
-                                    <h3 class="font-audiowide"> Frameworks </h3>
-                                    <img src="../shared/design/images/tools/jquery.png" class="img-skills" alt="Logo do framework JQuery" title="JQuery">
-                                    <img src="../shared/design/images/tools/angular.png" class="img-skills" alt="Logo do framework AngularJS" title="AngularJS">
-                                    <img src="../shared/design/images/tools/bootstrap.png" class="img-skills" alt="Logo do framework Bootstrap 5" title="Bootstrap 5">
-                                    <img src="../shared/design/images/tools/flask.png" class="img-skills" alt="Logo do framework Flask" title="Flask">
-                                    <img src="../shared/design/images/tools/flutter.png" class="img-skills" alt="Logo do framework Flutter" title="Flutter">
-                                    <img src="../shared/design/images/tools/spring-boot.png" class="img-skills" alt="Logo do framework Java Spring Boot" title="Java Spring Boot">
-                                    <img src="../shared/design/images/tools/maven.png" class="img-skills" alt="Logo do framework Java Maven" title="Java Maven">                                    
-                                </div>
-                                <div class="offset-lg-1 col-lg-3 mb-5">
-                                    <h3 class="font-audiowide"> Banco de Dados </h3>
-                                    <img src="../shared/design/images/tools/postgres.png" class="img-skills" alt="Logo do banco de dados PostgreSQL" title="PostgreSQL">
-                                    <img src="../shared/design/images/tools/mysql.png" class="img-skills" alt="Logo do banco de dados MySQL" title="MySQL">
-                                    <img src="../shared/design/images/tools/pl-sql.png" class="img-skills" alt="Logo do banco de dados PL/SQL" title="PL/SQL">
-                                    <img src="../shared/design/images/tools/mongodb.png" class="img-skills" alt="Logo do banco de dados MongoDB" title="MongoDB">
-                                    <img src="../shared/design/images/tools/sqlite.png" class="img-skills" alt="Logo do banco de dados SQLite" title="SQLite">                                    
-                                </div>
-                            </div>                        
-                        </article>
-
-                        <article>
-                            <div class="row mb-4">
-                                <div class="col-12">
-                                    <h1 class="font-audiowide color-768499">Formações</h1>
-                                    <hr class="hr-title color-white">
-                                </div>
+            <main id="body-main" class="offset-md-4 offset-lg-2 offset-xl-2 col overflow-auto h-100">
+                <div class="container-fluid mt-5 mb-5">
+                    <div id="ancora-about"></div>
+                    <article id="article-about">
+                        <div class="row mb-4">
+                            <div class="col-sm-12">
+                                <h1 class="font-audiowide color-768499">Sobre</h1>
+                                <hr class="hr-title color-white">
                             </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-md-11 col-lg-11">
-                                    <ul class="timeline font-k2d" style="border-left: 1px solid #0C111A;">
-                                      <li class="timeline-item-color-0C111A mb-5 background-color-262B32 p-3 rounded">
-                                        <h4 class="color-white font-audiowide">Técnologo em Sistemas para Internet</h4>
-                                        <p class="text-muted fw-bold mb-0">FATEC Jales - Prof. José Camargo</p>
-                                        <p class="text-muted mb-2 fw-bold">Janeiro 2017 / Dezembro 2019</p>
-                                        <p class="text-muted mb-2 fw-bold"></p>
-                                        <p class="text-muted">
-                                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                                          necessitatibus adipisci, ad alias, voluptate pariatur officia
-                                          repellendus repellat inventore fugit perferendis totam dolor
-                                          voluptas et corrupti distinctio maxime corporis optio?
-                                        </p>
-                                      </li>
-                                      <li class="timeline-item-color-0C111A mb-5 background-color-262B32 p-3 rounded">
-                                        <h4 class="color-white font-audiowide">Técnico em Informática para Internet</h4>
-                                        <p class="text-muted fw-bold mb-0">ETEC Fernandópolis - Prof. Armando José Farinazzo</p>
-                                        <p class="text-muted mb-2 fw-bold">Junho 2015 / Dezembro 2016</p>
-                                        <p class="text-muted justify-text">
-                                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                                          necessitatibus adipisci, ad alias, voluptate pariatur officia
-                                          repellendus repellat inventore fugit perferendis totam dolor
-                                          voluptas et corrupti distinctio maxime corporis optio?
-                                        </p>
-                                      </li>  
-                                      
-                                      <li class="timeline-item-color-0C111A mb-5 background-color-262B32 p-3 rounded">
-                                        <h4 class="color-white font-audiowide">Língua Estrangeira Moderna – Inglês</h4>
-                                        <p class="text-muted fw-bold mb-0">Centro de Estudos de Línguas – E.E.”Joaquim Antônio Pereira”</p>
-                                        <p class="text-muted mb-2 fw-bold">Janeiro 2014 / Dezembro 2014</p>
-                                        <p class="text-muted justify-text">
-                                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                                          necessitatibus adipisci, ad alias, voluptate pariatur officia
-                                          repellendus repellat inventore fugit perferendis totam dolor
-                                          voluptas et corrupti distinctio maxime corporis optio?
-                                        </p>
-                                      </li>  
-                                    </ul>
-                                </div>
+                        </div>  
+                        <div id="section-about-mobile" class="row mb-2">
+                            <div class="col-sm-4 mb-2">
+                                <img src="../shared/design/images/perfil/perfil.jpg" class="rounded" alt="..." style="max-width: 100%; height: auto;">
                             </div>
-                        </article>
-
-                        <article>
-                            <div class="row mb-4">
-                                <div class="col-12">
-                                    <h1 class="font-audiowide color-768499">Experiências</h1>
-                                    <hr class="hr-title color-white">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-md-11 col-lg-11">
-                                    <ul class="timeline font-k2d" style="border-left: 1px solid #0C111A;">
-                                      <li class="timeline-item-color-0C111A mb-5 background-color-262B32 p-3 rounded">
-                                        <h4 class="color-white font-audiowide">BDO Brazil – RCS Auditores Independentes - Multinacional</h4>
-                                        <p class="text-muted fw-bold mb-0">Desenvolvedor Full-Stack Python e Java</p>
-                                        <p class="text-muted mb-2 fw-bold">Junho 2021 / Atualmente</p>
-                                        <p class="text-muted mb-2 fw-bold"></p>
-                                        <p class="text-muted">➔ Responsável por desenvolver API RestFul em Java e Python abrangendo nível nacional; </p>
-                                        <p class="text-muted">➔ Responsável por desenvolver scripts de automatização e processamento em Python; </p>
-                                        <p class="text-muted">➔ Responsável por desenvolver telas com HTML, CSS, JavaScript e JQuery; </p>
-                                        <p class="text-muted">➔ Responsável por elaborar consulta SQL/NoSQL no Postgres/MongoDB; </p>
-                                        <p class="text-muted">➔ Cloud: AWS S3, EC2; </p>
-                                        <p class="text-muted">➔ Utilização da ferramenta docker para banco de dados e aplicações no ambiente WSL2. </p>
-                                      </li>
-                                      <li class="timeline-item-color-0C111A mb-5 background-color-262B32 p-3 rounded">
-                                        <h4 class="color-white font-audiowide">SupraSys – Gestão Inteligente</h4>
-                                        <p class="text-muted fw-bold mb-0">Analista de Suporte</p>
-                                        <p class="text-muted mb-2 fw-bold"> Março 2020 / Dezembro 2020</p>
-                                        <p class="text-muted justify-text">➔ Elaboração de consultas SQL, manutenção de triggers e procedures no PL/SQL; </p>
-                                        <p class="text-muted">➔ Atendimento ao cliente; </p>
-                                        <p class="text-muted">➔ Conhecimento em sistema HelpDesk. </p>
-                                      </li>  
-                                      
-                                      <li class="timeline-item-color-0C111A mb-5 background-color-262B32 p-3 rounded">
-                                        <h4 class="color-white font-audiowide">OraSystems – Consultoria e Tecnologia </h4>
-                                        <p class="text-muted fw-bold mb-0">Analista de Suporte</p>
-                                        <p class="text-muted mb-2 fw-bold">Outubro 2018 / Janeiro 2020</p>
-                                        <p class="text-muted justify-text">➔ Elaboração de consultas SQL, manutenção de triggers e procedures no PL/SQL; </p>
-                                        <p class="text-muted">➔ Atendimento ao cliente; </p>
-                                        <p class="text-muted">➔ Conhecimento em sistema HelpDesk. </p>
-                                      </li>  
-                                    </ul>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article>
-                            <div class="row mb-4">
-                                <div class="col-12">
-                                    <h1 class="font-audiowide color-768499">Portifólio</h1>
-                                    <hr class="hr-title color-white">
-                                </div>
-                            </div>
-                            <div class="row row-cols-sm-12 row-cols-md-11 row-cols-lg-11 mb-5" id="list-projects">
-                                <div class="col-md-6 col-lg-3 card-project">
-                                    <div class="card background-color-0C111A">
-                                        <img src="../shared/design/images/portifolio/20200613_203848.jpg" class="img-thumbnail img-fluid background-color-0C111A border-background-color-262B32" alt="Imagem..." title="">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Toldos JN</h5>
-                                            <p class="card-text justify-text">Elaboração de um sistema web com APIs e a função de gerenciar produto e orçamentos da empresa.</p>                                            
-                                            <p class="card-text mb-0">Tipo: Sistema Web</p>                                  
-                                            <p class="card-text mb-0">Ferramentas: Java Spring Boot e Python Flask</p>
-                                            <p class="card-text">Status: Em construção</p>
-                                        </div>      
-                                        <div class="card-footer">
-                                            <small class="text-muted" id="last-update-wb-toldosjn">22:36 12/06/2022</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 card-project">
-                                    <div class="card background-color-0C111A">
-                                        <img src="../shared/design/images/portifolio/20210109_161742.jpg" class="img-thumbnail img-fluid background-color-0C111A border-background-color-262B32" alt="Imagem..." title="">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Toldos JN</h5>
-                                            <p class="card-text justify-text">Elaboração de um sistema mobile com comunicação via API com sistema web e a função de gerenciar fotos de produto da empresa.</p>                                            
-                                            <p class="card-text mb-0">Tipo: Aplicativo Mobile</p>                                  
-                                            <p class="card-text mb-0">Ferramentas: Dart e Flutter</p>
-                                            <p class="card-text">Status: Em construção</p>
-                                        </div>      
-                                        <div class="card-footer">
-                                            <small class="text-muted" id="last-update-app-toldosjn">19:38 12/07/2022</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 card-project">
-                                    <div class="card background-color-0C111A">
-                                        <img src="../shared/design/images/portifolio/20220911_210912.jpg" class="img-thumbnail img-fluid background-color-0C111A border-background-color-262B32" alt="Imagem..." title="">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Portifólio - Guilherme</h5>
-                                            <p class="card-text justify-text">Elaboração de um sistema mobile com comunicação via API com sistema web e a função de gerenciar fotos de produto da empresa.</p>                                            
-                                            <p class="card-text mb-0">Tipo: Página Web</p>                                  
-                                            <p class="card-text mb-0">Ferramentas: HTML, CSS, JavaScript e Bootstrap</p>
-                                            <p class="card-text">Status: Ativo</p>
-                                        </div>      
-                                        <div class="card-footer">
-                                            <small class="text-muted" id="last-update-web-portifolio">20:10 12/07/2022</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article>
-                            <div class="row mb-4">
-                                <div class="col-12">
-                                    <h1 class="font-audiowide color-768499">Contatos</h1>
-                                    <hr class="hr-title color-white">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-12 col-lg-4 col-sm-12 mb-5">
-                                    <form>
-                                        <div class="mb-3">
-                                          <label for="input-name" class="form-label">Nome<span class="required-input">*</span></label>
-                                          <input type="text" class="form-control" id="input-name" required="true">
-                                        </div>
-                                        <div class="mb-3">
-                                          <label for="input-email" class="form-label">E-mail<span class="required-input">*</span></label>
-                                          <input type="email" class="form-control" id="input-email" required="true">
-                                        </div>
-                                        <div class="mb-3">
-                                          <label for="input-subject" class="form-label">Assunto</label>
-                                          <input type="text" class="form-control" id="input-subject">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="input-message" class="form-label">Mensagem<span class="required-input">*</span></label>
-                                            <textarea class="form-control" id="input-message" rows="3" required="true"></textarea>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                    </form>
-                                </div>
-
-                                <div id="vr-divider-contact" class="offset-md-1 offset-lg-1 col-md-1 col-lg-1" style="height: 300px;">
-                                    <div style="border-left:1px solid #8F8F8F;height:100%"></div>
-                                </div>
-
-                                <hr id="hr-divider-contact" class="mb-5">
-
-                                
-                                <div class="col-md-12 col-lg-4 col-sm-12">
-                                    <p> 
-                                        <i class="fa-solid fa-envelope" style="font-size: 2em; padding-right: 10px; padding-left: 2px;" title="Gmail" alt="Icone Email" ></i>
-                                        <a href="mailto:guilhermeleopoldinoo@gmail.com?subject=" target="_blank" style="text-decoration:none" id="contact-email">
-                                            guilhermeleopoldinoo@gmail.com
-                                        </a>
-                                        <i id="icon-copy-email" class="fa-regular fa-copy" onclick="copyToClipboardEffect(this)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Copiar texto"></i>
-                                    </p>
-                                    <p> 
-                                        <i class="fa-brands fa-linkedin" style="font-size: 2em; padding-right: 11px; padding-left: 4px;" title="LinkedIn" alt="Icone LinkedIn"></i> 
-                                        <a href="https://www.linkedin.com/in/guilhermebuzati/" target="_blank" style="text-decoration:none" id="contact-linkedin">
-                                            Guilherme Buzati
-                                        </a>
+                            <div class="col-sm-8 mb-3 ">       
+                                <ul id="list-about-mobile">   
+                                    <li> <b>Nome:</b> Guilherme Buzati </li>                      
+                                    <li> <b>Cargo:</b> Desenvolvedor Java/Python Full-Stack </li>                      
+                                    <li> <b>Formação:</b> Tecnólogo em Sistema para Internet </li>               
+                                    <li> <b>Linkedin:</b> <a href="https://www.linkedin.com/in/guilhermebuzati/" target="_blank"> Guilherme Buzati</a>
                                         <i id="icon-copy-linkedin" class="fa-regular fa-copy" onclick="copyToClipboardEffect(this)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Copiar texto"></i>
-                                    </p>
-                                    <p> 
-                                        <i class="fa-brands fa-github" style="font-size: 2em; padding-right: 9px; padding-left: 4px;" title="GitHub" alt="Icone GitHub"></i> 
-                                        <a href="https://github.com/GuilhermeBuzati" target="_blank" style="text-decoration:none" id="contact-github">
+                                    </li>               
+                                    <li> <b>GitHub:</b> <a href="https://github.com/GuilhermeBuzati" target="_blank">
                                             Guilherme Buzati
                                         </a>
-                                        <i id="icon-copy-github" class="fa-regular fa-copy" onclick="copyToClipboardEffect(this)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Copiar texto"></i>
+                                        <i id="icon-copy-github" class="fa-regular fa-copy" onclick="copyToClipboardEffect(this)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Copiar texto"></i></li>               
+                                </ul>                          
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-sm-12 col-md-11 col-lg-11">
+                                <p class="justify-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id posuere urna.
+                                    Praesent sit amet nisi semper, aliquam erat eu, faucibus justo. Etiam ornare augue quis bibendum rutrum.
+                                    Cras vehicula, orci vitae ultrices tristique, mauris magna scelerisque dolor, sit amet pellentesque mauris elit id enim.
+                                    Donec ut orci porta enim dignissim ultrices. Nullam suscipit congue erat, eget maximus nibh luctus et.
+                                    In volutpat nunc id nisi laoreet dignissim. Mauris ac ullamcorper ante.
+                                    Pellentesque pharetra pellentesque felis, sit amet convallis velit dapibus ut.
+                                    Donec vehicula risus nec ipsum dignissim vehicula. Nulla viverra libero at tortor convallis facilisis.
+                                    Sed placerat massa viverra pretium molestie.
+                                </p>
+                            </div>
+                            <div class="col-sm-12 col-md-11 col-lg-11">
+                                <p class="justify-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id posuere urna.
+                                    Praesent sit amet nisi semper, aliquam erat eu, faucibus justo. Etiam ornare augue quis bibendum rutrum.
+                                    Cras vehicula, orci vitae ultrices tristique, mauris magna scelerisque dolor, sit amet pellentesque mauris elit id enim.
+                                    Donec ut orci porta enim dignissim ultrices. Nullam suscipit congue erat, eget maximus nibh luctus et.
+                                    In volutpat nunc id nisi laoreet dignissim. Mauris ac ullamcorper ante.
+                                    Pellentesque pharetra pellentesque felis, sit amet convallis velit dapibus ut.
+                                    Donec vehicula risus nec ipsum dignissim vehicula. Nulla viverra libero at tortor convallis facilisis.
+                                    Sed placerat massa viverra pretium molestie.
+                                </p>
+                            </div>
+                        </div>  
+                    </article>
+
+                    <div id="ancora-skills"></div>
+                    <article id="article-skills">
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <h1 class="font-audiowide color-768499">Habilidades</h1>
+                                <hr class="hr-title color-white">
+                            </div>
+                        </div>   
+                        <div class="row mb-4">
+                            <div class="col-lg-3 mb-5">
+                                <h3 class="font-audiowide"> Linguagens </h3>                                    
+                                <img src="../shared/design/images/tools/java.png" class="img-skills" alt="Logo da linguagem Java" title="Java">
+                                <img src="../shared/design/images/tools/python.png" class="img-skills"  alt="Logo da linguagem Python" title="Python">
+                                <img src="../shared/design/images/tools/javascript.png" class="img-skills" alt="Logo da linguagem JavaScript" title="JavaScript">
+                                <img src="../shared/design/images/tools/dart.png" class="img-skills" alt="Logo da linguagem Dart" title="Dart">
+                                <img src="../shared/design/images/tools/html.png" class="img-skills" alt="Logo da linguagem HTML 5" title="HTML 5">
+                                <img src="../shared/design/images/tools/css.png" class="img-skills" alt="Logo da linguagem CSS 3" title="CSS 3">
+                                <img src="../shared/design/images/tools/php.png" class="img-skills" alt="Logo da linguagem PHP" title="PHP">                                    
+                            </div>
+                            <div class="offset-lg-1 col-lg-3 col-md-11 mb-5">
+                                <h3 class="font-audiowide"> Frameworks </h3>
+                                <img src="../shared/design/images/tools/jquery.png" class="img-skills" alt="Logo do framework JQuery" title="JQuery">
+                                <img src="../shared/design/images/tools/angular.png" class="img-skills" alt="Logo do framework AngularJS" title="AngularJS">
+                                <img src="../shared/design/images/tools/bootstrap.png" class="img-skills" alt="Logo do framework Bootstrap 5" title="Bootstrap 5">
+                                <img src="../shared/design/images/tools/flask.png" class="img-skills" alt="Logo do framework Flask" title="Flask">
+                                <img src="../shared/design/images/tools/flutter.png" class="img-skills" alt="Logo do framework Flutter" title="Flutter">
+                                <img src="../shared/design/images/tools/spring-boot.png" class="img-skills" alt="Logo do framework Java Spring Boot" title="Java Spring Boot">
+                                <img src="../shared/design/images/tools/maven.png" class="img-skills" alt="Logo do framework Java Maven" title="Java Maven">                                    
+                            </div>
+                            <div class="offset-lg-1 col-lg-3 mb-5">
+                                <h3 class="font-audiowide"> Banco de Dados </h3>
+                                <img src="../shared/design/images/tools/postgres.png" class="img-skills" alt="Logo do banco de dados PostgreSQL" title="PostgreSQL">
+                                <img src="../shared/design/images/tools/mysql.png" class="img-skills" alt="Logo do banco de dados MySQL" title="MySQL">
+                                <img src="../shared/design/images/tools/pl-sql.png" class="img-skills" alt="Logo do banco de dados PL/SQL" title="PL/SQL">
+                                <img src="../shared/design/images/tools/mongodb.png" class="img-skills" alt="Logo do banco de dados MongoDB" title="MongoDB">
+                                <img src="../shared/design/images/tools/sqlite.png" class="img-skills" alt="Logo do banco de dados SQLite" title="SQLite">                                    
+                            </div>
+                        </div>                        
+                    </article>
+
+                    <div id="ancora-formation"></div>
+                    <article id="article-formation">
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <h1 class="font-audiowide color-768499">Formações</h1>
+                                <hr class="hr-title color-white">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-11 col-lg-11">
+                                <ul class="timeline font-k2d" style="border-left: 1px solid #0C111A;">
+                                    <li class="timeline-item-color-0C111A mb-5 background-color-262B32 p-3 rounded">
+                                    <h4 class="color-white font-audiowide">Técnologo em Sistemas para Internet</h4>
+                                    <p class="text-muted fw-bold mb-0">FATEC Jales - Prof. José Camargo</p>
+                                    <p class="text-muted mb-2 fw-bold">Janeiro 2017 / Dezembro 2019</p>
+                                    <p class="text-muted mb-2 fw-bold"></p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                                        necessitatibus adipisci, ad alias, voluptate pariatur officia
+                                        repellendus repellat inventore fugit perferendis totam dolor
+                                        voluptas et corrupti distinctio maxime corporis optio?
                                     </p>
-                                    <p> 
-                                        <i class="fa-brands fa-discord" style="font-size: 2em; padding-right: 5px;" title="Discord" alt="Icone Discord"></i> 
-                                        <span id="contact-discord">Guiherme#3555</span>
-                                        <i id="icon-copy-discord" class="fa-regular fa-copy" onclick="copyToClipboardEffect(this)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Copiar texto"></i>
+                                    </li>
+                                    <li class="timeline-item-color-0C111A mb-5 background-color-262B32 p-3 rounded">
+                                    <h4 class="color-white font-audiowide">Técnico em Informática para Internet</h4>
+                                    <p class="text-muted fw-bold mb-0">ETEC Fernandópolis - Prof. Armando José Farinazzo</p>
+                                    <p class="text-muted mb-2 fw-bold">Junho 2015 / Dezembro 2016</p>
+                                    <p class="justify-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                                        necessitatibus adipisci, ad alias, voluptate pariatur officia
+                                        repellendus repellat inventore fugit perferendis totam dolor
+                                        voluptas et corrupti distinctio maxime corporis optio?
                                     </p>
-                                    <p class="mb-5"> 
-                                        <i class="fa-solid fa-location-dot" style="font-size: 2em; padding-right: 15px; padding-left: 6px;" title="Localização" alt="Icone Localização"></i> 
-                                        São Paulo - SP
-                                    </p>
+                                    </li>  
                                     
-                                    <hr>
-                                
+                                    <li class="timeline-item-color-0C111A mb-5 background-color-262B32 p-3 rounded">
+                                    <h4 class="color-white font-audiowide">Língua Estrangeira Moderna – Inglês</h4>
+                                    <p class="text-muted fw-bold mb-0">Centro de Estudos de Línguas – E.E.”Joaquim Antônio Pereira”</p>
+                                    <p class="text-muted mb-2 fw-bold">Janeiro 2014 / Dezembro 2014</p>
+                                    <p class="justify-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                                        necessitatibus adipisci, ad alias, voluptate pariatur officia
+                                        repellendus repellat inventore fugit perferendis totam dolor
+                                        voluptas et corrupti distinctio maxime corporis optio?
+                                    </p>
+                                    </li>  
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div id="ancora-resume"></div>
+                    <article id="article-resume">
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <h1 class="font-audiowide color-768499">Experiências</h1>
+                                <hr class="hr-title color-white">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-11 col-lg-11">
+                                <ul class="timeline font-k2d" style="border-left: 1px solid #0C111A;">
+                                    <li class="timeline-item-color-0C111A mb-5 background-color-262B32 p-3 rounded">
+                                    <h4 class="color-white font-audiowide">BDO Brazil – RCS Auditores Independentes - Multinacional</h4>
+                                    <p class="text-muted fw-bold mb-0">Desenvolvedor Full-Stack Python e Java</p>
+                                    <p class="text-muted mb-2 fw-bold">Junho 2021 / Atualmente</p>
+                                    <p class="text-muted mb-2 fw-bold"></p>
+                                    <p>➔ Responsável por desenvolver API RestFul em Java e Python abrangendo nível nacional; </p>
+                                    <p>➔ Responsável por desenvolver scripts de automatização e processamento em Python; </p>
+                                    <p>➔ Responsável por desenvolver telas com HTML, CSS, JavaScript e JQuery; </p>
+                                    <p>➔ Responsável por elaborar consulta SQL/NoSQL no Postgres/MongoDB; </p>
+                                    <p>➔ Cloud: AWS S3, EC2; </p>
+                                    <p>➔ Utilização da ferramenta docker para banco de dados e aplicações no ambiente WSL2. </p>
+                                    </li>
+                                    <li class="timeline-item-color-0C111A mb-5 background-color-262B32 p-3 rounded">
+                                    <h4 class="color-white font-audiowide">SupraSys – Gestão Inteligente</h4>
+                                    <p class="text-muted fw-bold mb-0">Analista de Suporte</p>
+                                    <p class="text-muted mb-2 fw-bold"> Março 2020 / Dezembro 2020</p>
+                                    <p class="justify-text">➔ Elaboração de consultas SQL, manutenção de triggers e procedures no PL/SQL; </p>
+                                    <p>➔ Atendimento ao cliente; </p>
+                                    <p>➔ Conhecimento em sistema HelpDesk. </p>
+                                    </li>  
+                                    
+                                    <li class="timeline-item-color-0C111A mb-5 background-color-262B32 p-3 rounded">
+                                    <h4 class="color-white font-audiowide">OraSystems – Consultoria e Tecnologia </h4>
+                                    <p class="text-muted fw-bold mb-0">Analista de Suporte</p>
+                                    <p class="text-muted mb-2 fw-bold">Outubro 2018 / Janeiro 2020</p>
+                                    <p class="justify-text">➔ Elaboração de consultas SQL, manutenção de triggers e procedures no PL/SQL; </p>
+                                    <p>➔ Atendimento ao cliente; </p>
+                                    <p>➔ Conhecimento em sistema HelpDesk. </p>
+                                    </li>  
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div id="ancora-portifolio"></div>
+                    <article id="article-portifolio">
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <h1 class="font-audiowide color-768499">Portifólio</h1>
+                                <hr class="hr-title color-white">
+                            </div>
+                        </div>
+                        <div class="row row-cols-sm-12 row-cols-md-11 row-cols-lg-11 mb-5" id="list-projects">
+                            <div class="col-md-6 col-lg-3 card-project">
+                                <div class="card background-color-0C111A">
+                                    <img src="../shared/design/images/portifolio/20200613_203848.jpg" class="img-thumbnail img-fluid background-color-0C111A border-background-color-262B32" alt="Imagem..." title="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Toldos JN</h5>
+                                        <p class="card-text justify-text">Elaboração de um sistema web com APIs e a função de gerenciar produto e orçamentos da empresa.</p>                                            
+                                        <p class="card-text mb-0">Tipo: Sistema Web</p>                                  
+                                        <p class="card-text mb-0">Ferramentas: Java Spring Boot e Python Flask</p>
+                                        <p class="card-text">Status: Em construção</p>
+                                    </div>      
+                                    <div class="card-footer">
+                                        <small class="text-muted" id="last-update-wb-toldosjn">22:36 12/06/2022</small>
+                                    </div>
                                 </div>
                             </div>
-                        </article>
-                    </div>       
+                            <div class="col-md-6 col-lg-3 card-project">
+                                <div class="card background-color-0C111A">
+                                    <img src="../shared/design/images/portifolio/20210109_161742.jpg" class="img-thumbnail img-fluid background-color-0C111A border-background-color-262B32" alt="Imagem..." title="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Toldos JN</h5>
+                                        <p class="card-text justify-text">Elaboração de um sistema mobile com comunicação via API com sistema web e a função de gerenciar fotos de produto da empresa.</p>                                            
+                                        <p class="card-text mb-0">Tipo: Aplicativo Mobile</p>                                  
+                                        <p class="card-text mb-0">Ferramentas: Dart e Flutter</p>
+                                        <p class="card-text">Status: Em construção</p>
+                                    </div>      
+                                    <div class="card-footer">
+                                        <small class="text-muted" id="last-update-app-toldosjn">19:38 12/07/2022</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 card-project">
+                                <div class="card background-color-0C111A">
+                                    <img src="../shared/design/images/portifolio/20220911_210912.jpg" class="img-thumbnail img-fluid background-color-0C111A border-background-color-262B32" alt="Imagem..." title="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Portifólio - Guilherme</h5>
+                                        <p class="card-text justify-text">Elaboração de um sistema mobile com comunicação via API com sistema web e a função de gerenciar fotos de produto da empresa.</p>                                            
+                                        <p class="card-text mb-0">Tipo: Página Web</p>                                  
+                                        <p class="card-text mb-0">Ferramentas: HTML, CSS, JavaScript e Bootstrap</p>
+                                        <p class="card-text">Status: Ativo</p>
+                                    </div>      
+                                    <div class="card-footer">
+                                        <small class="text-muted" id="last-update-web-portifolio">20:10 12/07/2022</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div id="ancora-contact"></div>
+                    <article id="article-contact">
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <h1 class="font-audiowide color-768499">Contatos</h1>
+                                <hr class="hr-title color-white">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div id="section-form-email" class="col-md-12 col-lg-4 col-sm-12 mb-5" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Opa, esse formulário é para preencher espaço, mas também é um atalho para enviar e-mail caso queira"></i>
+                                <form action="mailto:guilhermeleopoldinoo@gmail.com" method="post" enctype="text/plain">
+                                    <div class="mb-3">
+                                        <label for="input-name" class="form-label">Nome<span class="required-input">*</span></label>
+                                        <input type="text" class="form-control" id="input-name" required="true">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="input-email" class="form-label">E-mail<span class="required-input">*</span></label>
+                                        <input name="mail" type="email" class="form-control" id="input-email" required="true">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="input-subject" class="form-label">Assunto</label>
+                                        <input type="text" class="form-control" id="input-subject">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="input-message" class="form-label">Mensagem<span class="required-input">*</span></label>
+                                        <textarea name="coment" class="form-control" id="input-message" rows="3" required="true"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary background-color-0C111A">Enviar</button>
+                                    <button type="reset" class="btn btn-secondary background-color-262B32">Limpar</button>
+                                </form>
+                            </div>
+
+                            <div id="vr-divider-contact" class="offset-md-1 offset-lg-1 col-md-1 col-lg-1" style="height: 300px;">
+                                <div style="border-left:1px solid #8F8F8F;height:100%"></div>
+                            </div>
+
+                            <hr id="hr-divider-contact" class="mb-5">
+
+                            
+                            <div class="col-md-12 col-lg-4 col-sm-12">
+                                <p> 
+                                    <i class="fa-solid fa-envelope" style="font-size: 2em; padding-right: 10px; padding-left: 2px;" title="Gmail" alt="Icone Email" ></i>
+                                    <a href="mailto:guilhermeleopoldinoo@gmail.com?subject=" target="_blank"  id="contact-email">
+                                        guilhermeleopoldinoo@gmail.com
+                                    </a>
+                                    <i id="icon-copy-email" class="fa-regular fa-copy" onclick="copyToClipboardEffect(this)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Copiar texto"></i>
+                                </p>
+                                <p> 
+                                    <i class="fa-brands fa-linkedin" style="font-size: 2em; padding-right: 11px; padding-left: 4px;" title="LinkedIn" alt="Icone LinkedIn"></i> 
+                                    <a href="https://www.linkedin.com/in/guilhermebuzati/" target="_blank"  id="contact-linkedin">
+                                        Guilherme Buzati
+                                    </a>
+                                    <i id="icon-copy-linkedin" class="fa-regular fa-copy" onclick="copyToClipboardEffect(this)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Copiar texto"></i>
+                                </p>
+                                <p> 
+                                    <i class="fa-brands fa-github" style="font-size: 2em; padding-right: 9px; padding-left: 4px;" title="GitHub" alt="Icone GitHub"></i> 
+                                    <a href="https://github.com/GuilhermeBuzati" target="_blank"  id="contact-github">
+                                        Guilherme Buzati
+                                    </a>
+                                    <i id="icon-copy-github" class="fa-regular fa-copy" onclick="copyToClipboardEffect(this)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Copiar texto"></i>
+                                </p>
+                                <p> 
+                                    <i class="fa-brands fa-discord" style="font-size: 2em; padding-right: 5px;" title="Discord" alt="Icone Discord"></i> 
+                                    <span id="contact-discord">Guiherme#3555</span>
+                                    <i id="icon-copy-discord" class="fa-regular fa-copy" onclick="copyToClipboardEffect(this)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Copiar texto"></i>
+                                </p>
+                                <p class="mb-5"> 
+                                    <i class="fa-solid fa-location-dot" style="font-size: 2em; padding-right: 15px; padding-left: 6px;" title="Localização" alt="Icone Localização"></i> 
+                                    São Paulo - SP
+                                </p>
+                                
+                                <hr>
+                            
+                            </div>
+                        </div>
+                    </article>
+                </div>       
             </main>
+            <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
         </div>
     </div>
 
@@ -490,8 +541,53 @@
             }
         }
 
+        $( ".nav-item" ).click(function() {
+            $('#div-navbar-mobile').addClass("collapse");
+            $('#div-navbar-mobile').removeClass("show");
+        });
 
+        let btn_back_to_top = document.getElementById("btn-back-to-top")
+        let form_send_email = document.getElementById("section-form-email")
+        let scroll_form_email = $(form_send_email).offset().top;
+        let showed_tooltip = false
+        var mobile_screen = window.matchMedia("(max-width: 767px)")
 
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn_back_to_top.style.display = "block";
+            } else {
+                btn_back_to_top.style.display = "none";
+            }
+
+            console.log(showed_tooltip)
+            if (!showed_tooltip){
+                if (document.documentElement.scrollTop >=  scroll_form_email) {
+                    $(form_send_email).tooltip("show");
+                    showed_tooltip = true
+
+                }else if(document.documentElement.scrollTop >=  (scroll_form_email/2)){
+                    $(form_send_email).tooltip("show");
+                    showed_tooltip = true
+
+                    setTimeout(function () {
+                        $(form_send_email).tooltip("hide");
+                    }, 5000);
+                    
+                }
+            }
+
+        }
+
+        btn_back_to_top.addEventListener("click", backToTop);
+
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
     </script>
 
 
