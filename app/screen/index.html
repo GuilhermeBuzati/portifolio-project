@@ -60,7 +60,7 @@
                     <hr class="color-8F8F8F">
                     <ul class="nav nav-pills flex-column mb-auto font-audiowide">
                         <li>
-                            <a href="#" class="nav-link active " aria-current="page">
+                            <a href="#" class="nav-link text-white" >
                                 <i class="fa-solid fa-code me-1 color-8F8F8F"></i>
                                 Sobre
                             </a>
@@ -541,9 +541,41 @@
             }
         }
 
-        $( ".nav-item" ).click(function() {
-            $('#div-navbar-mobile').addClass("collapse");
-            $('#div-navbar-mobile').removeClass("show");
+        $( document ).ready(function() {
+
+            $( ".nav-item" ).click(function() {
+                $('#div-navbar-mobile').addClass("collapse");
+                $('#div-navbar-mobile').removeClass("show");
+            });
+
+            
+            var menu = $('#sidebar-me .nav li a');
+
+            function addClass(el) {
+                menu.removeClass('active');
+                $(el).addClass('active');
+                $(el).attr("aria-current","page")
+            };
+
+            var sectionPositions = $('article').map(function(){
+                return $(this).position().top;
+            });
+
+            var sections = $('article');
+
+            $(document).on('scroll', function () {
+                var scroll = $(document).scrollTop();
+                var currentElement;
+                $(sectionPositions).each(function (i) {
+                    if (scroll > this - 50){} currentElement = menu[i];
+                });
+                currentElement && addClass(currentElement);
+            });
+
+            menu.on('click', function () {
+                addClass(this);
+            });
+
         });
 
         let btn_back_to_top = document.getElementById("btn-back-to-top")
