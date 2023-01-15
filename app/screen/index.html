@@ -546,6 +546,7 @@
         let form_send_email = document.getElementById("section-form-email")
         let scroll_form_email = $(form_send_email).offset().top;
         let showed_tooltip = false
+        var mobile_screen = window.matchMedia("(max-width: 767px)")
 
         window.onscroll = function () {
             scrollFunction();
@@ -557,9 +558,8 @@
             } else {
                 btn_back_to_top.style.display = "none";
             }
-            console.log(document.documentElement.scrollTop )
-            console.log(scroll_form_email )
 
+            console.log(showed_tooltip)
             if (!showed_tooltip){
                 if (document.documentElement.scrollTop >=  scroll_form_email) {
                     $(form_send_email).tooltip("show");
@@ -571,7 +571,7 @@
 
                     setTimeout(function () {
                         $(form_send_email).tooltip("hide");
-                    }, 3000);
+                    }, 5000);
                     
                 }
             }
