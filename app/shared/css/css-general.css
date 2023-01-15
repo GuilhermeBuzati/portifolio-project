@@ -122,6 +122,11 @@ p {
     color: #fff;
 }
 
+#list-about{
+    list-style: none;
+    padding-left: 0;
+}
+
 @media (max-width: 575px){
     #btn-back-to-top{
         width: 15% !important;
