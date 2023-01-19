@@ -272,7 +272,7 @@
                             <div class="col-10">
                                 <h1 class="font-audiowide color-768499">
                                     Experiências 
-                                    <i class="fa-solid fa-download" title="Download currículo" da></i>
+                                    <i id="download-curriculo" class="fa-solid fa-download" title="Download currículo" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Download currículo"></i>
                                 </h1>
                                 <hr class="hr-title color-white">
                             </div>
@@ -502,9 +502,12 @@
                 });
                 currentElement && addClass(currentElement);
 
-                if ((scroll >= scrollExp - 200 && scroll <= scrollExp + 100))
-                    console.log('baixar curriculo')
+                if ((scroll >= scrollExp - 400 && scroll <= scrollExp + 100))                                        
+                    $("#download-curriculo").tooltip("show");
 
+                    setTimeout(function () {
+                        $("#download-curriculo").tooltip("hide");
+                    }, 4000);
             });
 
             menu.on('click', function () {
