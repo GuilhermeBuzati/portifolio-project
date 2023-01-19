@@ -269,9 +269,14 @@
                     <div id="ancora-resume"></div>
                     <article id="article-resume">
                         <div class="row mb-4">
-                            <div class="col-12">
-                                <h1 class="font-audiowide color-768499">Experiências</h1>
+                            <div class="col-10">
+                                <h1 class="font-audiowide color-768499">
+                                    Experiências 
+                                    <i class="fa-solid fa-download" title="Download currículo" da></i>
+                                </h1>
                                 <hr class="hr-title color-white">
+                            </div>
+                            <div class="col-1">
                             </div>
                         </div>
                         <div class="row">
@@ -487,6 +492,8 @@
 
             var sections = $('article');
 
+            var scrollExp = $('#ancora-resume').position().top;
+
             $(document).on('scroll', function () {
                 var scroll = $(document).scrollTop();
                 var currentElement;
@@ -494,6 +501,10 @@
                     if (scroll > this - 50) currentElement = menu[i];
                 });
                 currentElement && addClass(currentElement);
+
+                if ((scroll >= scrollExp - 200 && scroll <= scrollExp + 100))
+                    console.log('baixar curriculo')
+
             });
 
             menu.on('click', function () {
