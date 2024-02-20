@@ -349,7 +349,7 @@
                                 <img src="../shared/design/images/portifolio/20220911_210912.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                                  <p class="card-text">Esse card ainda está em construção, enquanto isso fique com a Xayah.</p>
                                 </div>
                               </div>
                             </div>
@@ -358,7 +358,7 @@
                                 <img src="../shared/design/images/portifolio/20210109_161742.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                  <p class="card-text">Esse card ainda está em construção, enquanto isso fique com a Nina.</p>
                                 </div>
                               </div>
                             </div>
@@ -397,44 +397,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>            
-        const items = document.getElementById('list-projects').children;
-
-        let text = "";
-        for (let i = 0; i < items.length; i++) {
-            item_child = items[i].children
-
-            for(let j = 0; j < item_child.length; j++){
-                aux = item_child[0].children;
-
-                for(let k = 0; k < aux.length; k++){
-
-                    if(k == 2){
-                        id_last_update = aux[k].children[0].id
-                        text_last_update = aux[k].children[0].innerHTML;
-                        console.log(text_last_update)
-                        lastUpdatePortifolio(text_last_update, id_last_update)
-                    }
-                }
-
-            }
-        }
-
-        function lastUpdatePortifolio(date_str, id){
-
-            var date_update = new Date(date_str);    
-
-            let currentTime = new Date()
-            let difference = currentTime - date_update;
-            let dias = Math.floor(difference / 1000 / 60 / 60 / 24);
-            let horas = Math.floor(difference / 1000 / 60 / 60) % 24;
-            let minutos = Math.floor(difference / 1000 / 60) % 60;
-            let segundos = Math.floor(difference / 1000) % 60;
-            
-            console.log({ dias, horas, minutos, segundos })
-
-            document.getElementById(id).innerHTML = "Última atualização: " + dias + " Dias " + horas + " Horas " + minutos + " Min " + segundos + " Segs";
-        }
-
         function copyToClipboardEffect(e){            
             id = "#" + e.id
             
